@@ -10,15 +10,15 @@
         private $atrybut4;
         private $zawartosc;
 
-        public function __construct($wiersz){
-            $this->nr           = $wiersz['nr'];
-            $this->rodzic       = $wiersz['rodzic'];
-            $this->typ_elementu = $wiersz['typ_elementu'];
-            $this->atrybut1     = $wiersz['atrybut1'];
-            $this->atrybut2     = $wiersz['atrybut2'];
-            $this->atrybut3     = $wiersz['atrybut3'];
-            $this->atrybut4     = $wiersz['atrybut4'];
-            $this->zawartosc    = $wiersz['zawartosc'];
+        public function __construct($rekord){
+            $this->nr           = $rekord['nr'];
+            $this->rodzic       = $rekord['rodzic'];
+            $this->typ_elementu = $rekord['typ_elementu'];
+            $this->atrybut1     = $rekord['atrybut1'];
+            $this->atrybut2     = $rekord['atrybut2'];
+            $this->atrybut3     = $rekord['atrybut3'];
+            $this->atrybut4     = $rekord['atrybut4'];
+            $this->zawartosc    = $rekord['zawartosc'];
         }
 
         public function get_nr() {
