@@ -57,7 +57,7 @@
 
         public function get_zawartosc() {
             return $this->zawartosc;
-        }
+        }        
     }
 
 ?>
