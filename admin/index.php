@@ -5,7 +5,7 @@
     // $dsn = "mysql:host=$host;dbname=$db_name";
     $host = 'localhost';
     $db_name = 'moj_CMS';
-    $dsn = "mysql:host=$host;dbname=$db_name";
+    $dsn = "mysql:host=$host;dbname=$db_name;charset=utf8mb4";
 
     $db_user = 'root';
     $db_user_pass = '';

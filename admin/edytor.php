@@ -11,6 +11,7 @@
                 <tr>
     				<th>Nr</th>
     				<th>Rodzic</th>
+                    <th>Dzieci</th>
     				<th>Typ elementu</th>
     				<th>Atrybut 1</th>
                     <th>Atrybut 2</th>
@@ -26,6 +27,7 @@
                         echo "<tr>";
                         echo "<td>".$element->get_nr()."</td>";
                         echo "<td>".$element->get_rodzic()."</td>";
+                        echo "<td>".$element->get_dzieci()."</td>";
                         echo "<td>".$element->get_typ_elementu()."</td>";
                         echo "<td>".$element->get_atrybut1()."</td>";
                         echo "<td>".$element->get_atrybut2()."</td>";

@@ -3,6 +3,7 @@
     class Element {
         private $nr;
         private $rodzic;
+        private $dzieci;
         private $typ_elementu;
         private $atrybut1;
         private $atrybut2;
@@ -13,6 +14,7 @@
         public function __construct($rekord){
             $this->nr           = $rekord['nr'];
             $this->rodzic       = $rekord['rodzic'];
+            $this->dzieci      = $rekord['dzieci'];
             $this->typ_elementu = $rekord['typ_elementu'];
             $this->atrybut1     = $rekord['atrybut1'];
             $this->atrybut2     = $rekord['atrybut2'];
@@ -27,6 +29,10 @@
 
         public function get_rodzic() {
             return $this->rodzic;
+        }
+
+        public function get_dzieci() {
+            return $this->dzieci;
         }
 
         public function get_typ_elementu() {
