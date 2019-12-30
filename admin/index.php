@@ -28,13 +28,11 @@
         fwrite($plik, "<meta charset='utf-8'>\n");
         fwrite($plik, "<title></title>\n");
         fwrite($plik, "</head>\n");
-        fwrite($plik, "<body>\n");
 
         $dokument = new Document($elementy);
         //echo $dokument->elementy[0]->get_typ_elementu();
-        fwrite($plik, $dokument->zbudujDokument(0)."\n");
+        fwrite($plik, $dokument->zbudujDokument(1)."\n");
 
-        fwrite($plik, "</body>\n");
         fwrite($plik, "</html>\n");
         fclose($plik);
 
