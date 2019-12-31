@@ -5,6 +5,8 @@
         private $rodzic;
         private $dzieci;
         private $typ_elementu;
+        private $tag_otwierajacy;
+        private $tag_zamykajacy;
         private $atrybut1;
         private $atrybut2;
         private $atrybut3;
@@ -12,15 +14,17 @@
         private $zawartosc;
 
         public function __construct($rekord){
-            $this->nr           = $rekord['nr'];
-            $this->rodzic       = $rekord['rodzic'];
-            $this->dzieci      = $rekord['dzieci'];
-            $this->typ_elementu = $rekord['typ_elementu'];
-            $this->atrybut1     = $rekord['atrybut1'];
-            $this->atrybut2     = $rekord['atrybut2'];
-            $this->atrybut3     = $rekord['atrybut3'];
-            $this->atrybut4     = $rekord['atrybut4'];
-            $this->zawartosc    = $rekord['zawartosc'];
+            $this->nr               = $rekord['nr'];
+            $this->rodzic           = $rekord['rodzic'];
+            $this->dzieci           = $rekord['dzieci'];
+            $this->typ_elementu     = $rekord['typ_elementu'];
+            $this->tag_otwierajacy  = $rekord['tag_otwierajacy'];
+            $this->tag_zamykajacy   = $rekord['tag_zamykajacy'];
+            $this->atrybut1         = $rekord['atrybut1'];
+            $this->atrybut2         = $rekord['atrybut2'];
+            $this->atrybut3         = $rekord['atrybut3'];
+            $this->atrybut4         = $rekord['atrybut4'];
+            $this->zawartosc        = $rekord['zawartosc'];
         }
 
         public function get_nr() {
@@ -37,6 +41,14 @@
 
         public function get_typ_elementu() {
             return $this->typ_elementu;
+        }
+
+        public function get_tag_otwierajacy() {
+            return $this->tag_otwierajacy;
+        }
+
+        public function get_tag_zamykajacy() {
+            return $this->tag_zamykajacy;
         }
 
         public function get_atrybut1() {
@@ -57,7 +69,7 @@
 
         public function get_zawartosc() {
             return $this->zawartosc;
-        }        
+        }
     }
 
 ?>

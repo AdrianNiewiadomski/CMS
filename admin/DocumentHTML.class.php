@@ -12,17 +12,19 @@
         function zbudujDokument($nr){
             $nr--;
             $tresc = "";
-            switch ($this->elementy[$nr]->get_typ_elementu()) {
-                case 'dokument HTML':
-                    $tresc = "<body>";
-                    break;
-                case 'nagłówek 1':
-                    $tresc = "<h1>";
-                    break;
-                case 'paragraf':
-                    $tresc = "<p>";
-                    break;
-            }
+            // switch ($this->elementy[$nr]->get_typ_elementu()) {
+            //     case 'dokument HTML':
+            //         $tresc = "<body>";
+            //         break;
+            //     case 'nagłówek 1':
+            //         $tresc = "<h1>";
+            //         break;
+            //     case 'paragraf':
+            //         $tresc = "<p>";
+            //         break;
+            // }
+            $tresc .= $this->elementy[$nr]->get_tag_otwierajacy();
+
             $tresc .= $this->elementy[$nr]->get_zawartosc();
 
             if($this->elementy[$nr]->get_dzieci() != ""){
@@ -33,18 +35,18 @@
                 }
             }
 
-
-            switch ($this->elementy[$nr]->get_typ_elementu()) {
-                case 'dokument HTML':
-                    $tresc .= "</body>";
-                    break;
-                case 'nagłówek 1':
-                    $tresc .= "</h1>";
-                    break;
-                case 'paragraf':
-                    $tresc .= "</p>";
-                    break;
-            }
+            $tresc .= $this->elementy[$nr]->get_tag_zamykajacy();
+            // switch ($this->elementy[$nr]->get_typ_elementu()) {
+            //     case 'dokument HTML':
+            //         $tresc .= "</body>";
+            //         break;
+            //     case 'nagłówek 1':
+            //         $tresc .= "</h1>";
+            //         break;
+            //     case 'paragraf':
+            //         $tresc .= "</p>";
+            //         break;
+            // }
             return $tresc;
         }
     }
