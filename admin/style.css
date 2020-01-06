@@ -1,8 +1,21 @@
+body {
+    font-family: sans-serif, Arial;
+}
+
 table, th, td{
-    border: 1px solid #ccc;
+    border: 1px solid #aaa;
     border-collapse: collapse;
     padding: 20px;
     text-align: center;
+}
+table .nr{
+    width:4%;
+}
+thead{
+    background-color: #ccc;
+}
+tbody tr:nth-child(even){
+    background-color: #eee;
 }
 
 table{
@@ -10,7 +23,24 @@ table{
     margin-left: auto;
     margin-right: auto;
 }
+table a {
+    text-decoration: none;
+    display: block;
+    float:left;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+.red{
+    background-color: #e74c3c;
 
+}
+.blue {
+    background-color: #3498db;
+}
+.green {
+    background-color: #2ecc71;
+}
 iframe{
     display: block;
     margin-left: auto;

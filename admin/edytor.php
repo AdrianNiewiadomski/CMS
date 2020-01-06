@@ -18,6 +18,7 @@
                     <th>Atrybut 3</th>
                     <th>Atrybut 4</th>
     				<th>Zawartość</th>
+                    <th>Opcje</th>
     			</tr>
             </thead>
 			<tbody>
@@ -34,6 +35,11 @@
                         echo "<td>".$element->get_atrybut3()."</td>";
                         echo "<td>".$element->get_atrybut4()."</td>";
                         echo "<td>".$element->get_zawartosc()."</td>";
+                        echo "<td>";
+                        echo "<a href='formularzWidok.php?rodzic=".$element->get_nr()."' class='green'>+</a>";
+                        echo "<a href='formularzWidok.php?id=".$element->get_nr()."' class='blue'>E</a>";
+                        echo "<a href='index.php?id=".$element->get_nr()."' class='red'>X</a>";
+                        echo "</td>";
                         echo "</tr>";
                     }
                 ?>
